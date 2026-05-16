@@ -46,7 +46,8 @@ public class Main {
         System.out.println("=== TESTE DE VALIDAÇÃO AUTOMÁTICA (Tratamento de Erros) ===");
         try {
             System.out.println("Tentando criar um guerreiro com pontos de vida negativos...");
-            Personagem guerreiroCorrompido = new Guerreiro("Assis", 4, -10, 50.0);
+            // Instanciação direta sem variável não utilizada para evitar o aviso do compilador
+            new Guerreiro("Assis", 4, -10, 50.0);
         } catch (IllegalArgumentException e) {
             // O sistema captura o erro lançado pelo setter impedindo a criação do objeto
             System.out.println("Capturado com sucesso! " + e.getMessage());
